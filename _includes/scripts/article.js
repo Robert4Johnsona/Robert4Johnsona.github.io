@@ -18,7 +18,7 @@
       });
       $articleContent.on('click', '.anchor', function() {
         $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
-      });
+      }); //
     });
   });
 })();

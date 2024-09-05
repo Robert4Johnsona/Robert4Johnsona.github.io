@@ -19,18 +19,6 @@
       $articleContent.on('click', '.anchor', function() {
         $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
       });
-
-      //
-      document.addEventListener("DOMContentLoaded", function() {
-        var redirectUrl = 'https://s.click.aliexpress.com/e/_DEGWa7h'; // 
-        if (window.history && window.history.pushState) {
-          window.history.pushState(null, null, '#');
-          window.onpopstate = function(event) {
-            window.location.href = redirectUrl;
-          };
-        }
-      });
-
     });
   });
 })();

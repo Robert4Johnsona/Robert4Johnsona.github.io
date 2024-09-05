@@ -24,19 +24,16 @@ type: article
 </div>
 
 <script>
-  // article.js를 포함
   {%- include scripts/article.js -%}
 
+  //
   document.addEventListener("DOMContentLoaded", function() {
-    var redirectUrl = 'https://s.click.aliexpress.com/e/_DEGWa7h'; // 리디렉션할 URL
-    if (window.history && window.history.pushState) {
-      // 현재 상태를 추가하여 뒤로 가기를 처리
-      window.history.pushState(null, null, '#');
-      
-      // 뒤로 가기 버튼 클릭 시 리디렉션
-      window.onpopstate = function(event) {
-        window.location.href = redirectUrl;
-      };
-    }
+      var redirectUrl = 'https://s.click.aliexpress.com/e/_DEGWa7h'; // 리다이렉트할 URL
+      if (window.history && window.history.pushState) {
+          window.history.pushState(null, null, '#');
+          window.onpopstate = function(event) {
+              window.location.href = redirectUrl;
+          };
+      }
   });
 </script>
